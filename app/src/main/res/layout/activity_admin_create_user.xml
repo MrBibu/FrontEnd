@@ -2,8 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="24dp"
-    android:background="@android:color/white">
+    android:padding="24dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -26,23 +25,30 @@
             android:layout_marginBottom="12dp"/>
 
         <EditText
-            android:id="@+id/passwordInput"
+            android:id="@+id/facultyInput"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Password"
-            android:inputType="textPassword"
+            android:hint="Faculty"
+            android:layout_marginBottom="12dp"/>
+
+        <EditText
+            android:id="@+id/semesterInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Semester"
             android:layout_marginBottom="12dp"/>
 
         <Spinner
             android:id="@+id/roleSpinner"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:entries="@array/roles_admin"
             android:layout_marginBottom="24dp"/>
 
         <Button
-            android:id="@+id/registerBtn"
+            android:id="@+id/createBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Register"/>
+            android:text="Create User"/>
     </LinearLayout>
 </ScrollView>

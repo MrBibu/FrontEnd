@@ -1,31 +1,33 @@
-<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="24dp"
-    android:gravity="center_horizontal"
-    android:background="@android:color/white">
+    android:padding="24dp">
 
     <EditText
-        android:id="@+id/emailInput"
+        android:id="@+id/assignmentIdInput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Email"
-        android:inputType="textEmailAddress"
-        android:layout_marginBottom="16dp"/>
+        android:hint="Assignment ID"
+        android:layout_marginBottom="12dp"/>
 
     <EditText
-        android:id="@+id/passwordInput"
+        android:id="@+id/notesInput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Password"
-        android:inputType="textPassword"
+        android:hint="Notes"
+        android:layout_marginBottom="12dp"/>
+
+    <EditText
+        android:id="@+id/fileUrlInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="File URL"
         android:layout_marginBottom="24dp"/>
 
     <Button
-        android:id="@+id/loginBtn"
+        android:id="@+id/submitBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Login"/>
+        android:text="Submit Assignment"/>
 </LinearLayout>

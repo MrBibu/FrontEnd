@@ -4,28 +4,32 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="24dp"
-    android:gravity="center_horizontal"
     android:background="@android:color/white">
 
     <EditText
-        android:id="@+id/emailInput"
+        android:id="@+id/titleInput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Email"
-        android:inputType="textEmailAddress"
-        android:layout_marginBottom="16dp"/>
+        android:hint="Assignment Title"
+        android:layout_marginBottom="12dp"/>
 
     <EditText
-        android:id="@+id/passwordInput"
+        android:id="@+id/descriptionInput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Password"
-        android:inputType="textPassword"
+        android:hint="Description"
+        android:layout_marginBottom="12dp"/>
+
+    <EditText
+        android:id="@+id/deadlineInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Deadline (YYYY-MM-DD)"
         android:layout_marginBottom="24dp"/>
 
     <Button
-        android:id="@+id/loginBtn"
+        android:id="@+id/uploadBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Login"/>
+        android:text="Upload Assignment"/>
 </LinearLayout>

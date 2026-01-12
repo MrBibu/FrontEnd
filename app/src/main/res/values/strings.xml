@@ -1,5 +1,33 @@
 <resources>
+    <!-- App name -->
     <string name="app_name">AcademiaGo</string>
-    <string name="email">Email</string>
-    <string name="password">Password</string>
+
+    <!-- Login -->
+    <string name="login">Login</string>
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Password</string>
+    <string name="register_link">Don\'t have an account? Register</string>
+
+    <!-- Register -->
+    <string name="register">Register</string>
+    <string name="name_hint">Full Name</string>
+    <string name="faculty_hint">Faculty</string>
+    <string name="semester_hint">Semester</string>
+    <string name="password_requirement">Password must be at least 8 characters</string>
+
+    <!-- Admin Create User -->
+    <string name="create_user">Create User</string>
+    <string name="role_hint">Select Role</string>
+
+    <!-- Roles for RegisterActivity -->
+    <string-array name="roles">
+        <item>Student</item>
+        <item>Teacher</item>
+    </string-array>
+
+    <!-- Roles for AdminCreateUserActivity -->
+    <string-array name="roles_admin">
+        <item>Teacher</item>
+        <item>Student</item>
+    </string-array>
 </resources>

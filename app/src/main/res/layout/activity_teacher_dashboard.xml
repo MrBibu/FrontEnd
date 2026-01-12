@@ -11,51 +11,47 @@
         android:orientation="vertical"
         android:gravity="center_horizontal">
 
+        <!-- Welcome Text -->
         <TextView
             android:id="@+id/welcomeText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Welcome, Student!"
+            android:text="Teacher Dashboard"
             android:textSize="22sp"
             android:textStyle="bold"
             android:textColor="@android:color/holo_blue_dark"
             android:layout_marginBottom="32dp"/>
 
+        <!-- Teacher Actions -->
         <Button
-            android:id="@+id/assignmentsBtn"
+            android:id="@+id/manageStudentsBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="View Assignments"
+            android:text="Manage Students"
             android:layout_marginBottom="16dp"/>
 
         <Button
-            android:id="@+id/submitBtn"
+            android:id="@+id/manageCoursesBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Submit Assignment"
+            android:text="Manage Courses"
             android:layout_marginBottom="16dp"/>
 
         <Button
-            android:id="@+id/noticesBtn"
+            android:id="@+id/uploadAssignmentBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="View Notices"
+            android:text="Upload Assignment"
             android:layout_marginBottom="16dp"/>
 
         <Button
-            android:id="@+id/gradesBtn"
+            android:id="@+id/publishNoticeBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="View Grades"
-            android:layout_marginBottom="16dp"/>
-
-        <Button
-            android:id="@+id/messagesBtn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Messages / Q&amp;A"
+            android:text="Publish Notice"
             android:layout_marginBottom="24dp"/>
 
+        <!-- Logout -->
         <Button
             android:id="@+id/logoutBtn"
             android:layout_width="match_parent"

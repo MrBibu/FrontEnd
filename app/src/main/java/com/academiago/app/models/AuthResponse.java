@@ -1,10 +1,11 @@
 package com.academiago.app.models;
 
 public class AuthResponse {
-    private String accessToken;
-    private String tokenType;
+    private String token;
+    private String email;
+    private String role;
 
-    public String getAccessToken() { return accessToken; }
-    public String getTokenType() { return tokenType; }
-
+    public String getToken() { return token; }
+    public String getEmail() { return email; }
+    public String getRole() { return role; }
 }

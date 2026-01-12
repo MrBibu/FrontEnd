@@ -11,17 +11,39 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AcademiaGo">
+
+        <!-- Auth -->
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.auth.LoginActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.AcademiaGo">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-    </application>
+        <activity android:name=".ui.auth.RegisterActivity" />
+        <activity android:name=".ui.auth.ChangePasswordActivity" />
 
+        <!-- Student -->
+        <activity android:name=".ui.student.StudentDashboardActivity" />
+        <activity android:name=".ui.student.AssignmentsActivity" />
+        <activity android:name=".ui.student.SubmitAssignmentActivity" />
+        <activity android:name=".ui.student.GradesActivity" />
+        <activity android:name=".ui.student.MessagesActivity" />
+        <activity android:name=".ui.student.NoticesActivity" />
+
+        <!-- Teacher -->
+        <activity android:name=".ui.teacher.TeacherDashboardActivity" />
+        <activity android:name=".ui.teacher.UploadAssignmentActivity" />
+        <activity android:name=".ui.teacher.PublishNoticeActivity" />
+        <activity android:name=".ui.teacher.ManageCoursesActivity" />
+        <activity android:name=".ui.teacher.ManageStudentsActivity" />
+
+        <!-- Admin -->
+        <activity android:name=".ui.admin.AdminDashboardActivity" />
+        <activity android:name=".ui.admin.AdminCreateUserActivity" />
+
+    </application>
 </manifest>
