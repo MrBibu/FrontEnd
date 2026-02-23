@@ -1,42 +1,49 @@
 package com.academiago.mobile.ui;
 
 import android.os.Bundle;
-import android.widget.TextView;
-
 import androidx.appcompat.app.AppCompatActivity;
-
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import com.academiago.mobile.R;
+import com.academiago.mobile.ui.fragments.AdminDashboardFragment;
+import com.academiago.mobile.ui.fragments.StudentDashboardFragment;
+import com.academiago.mobile.ui.fragments.TeacherDashboardFragment;
 import com.academiago.mobile.utils.TokenManager;
 
 public class DashBoard extends AppCompatActivity {
-
-    private TextView roleTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
 
-        roleTextView = findViewById(R.id.roleTextView);
-
+        TokenManager.init(this);
         String role = TokenManager.getRole();
+
         if (role != null) {
-            roleTextView.setText("Welcome " + role);
-            setupDashboardForRole(role);
+            loadDashboardFragment(role);
         }
     }
 
-    private void setupDashboardForRole(String role) {
+    private void loadDashboardFragment(String role) {
+        Fragment fragment;
         switch (role) {
             case "ADMIN":
-                // Setup admin features
+                fragment = new AdminDashboardFragment();
                 break;
             case "TEACHER":
-                // Setup teacher features
+                fragment = new TeacherDashboardFragment();
                 break;
             case "STUDENT":
-                // Setup student features
+                fragment = new StudentDashboardFragment();
                 break;
+            default:
+                // Handle unknown role or show a default screen
+                return;
         }
+
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        transaction.replace(R.id.fragment_container, fragment);
+        transaction.commit();
     }
 }
